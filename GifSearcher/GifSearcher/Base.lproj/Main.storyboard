@@ -63,6 +63,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="searTextField" destination="d1Y-YS-jgT" id="LAK-aX-Ozz"/>
+                        <outlet property="searchButton" destination="Ku3-w4-41K" id="AOx-6K-K6q"/>
+                        <outlet property="searchResults" destination="tgb-Qx-aId" id="C81-uw-6IA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

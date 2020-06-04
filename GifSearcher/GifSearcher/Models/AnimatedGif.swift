@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+struct AnimatedGif: Codable {
+    var url: String
+}
