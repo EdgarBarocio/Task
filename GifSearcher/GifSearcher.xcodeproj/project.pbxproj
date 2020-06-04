@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		8E15D30D24892C2A00CD8E73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E15D30C24892C2A00CD8E73 /* AppDelegate.swift */; };
 		8E15D30F24892C2A00CD8E73 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E15D30E24892C2A00CD8E73 /* SceneDelegate.swift */; };
-		8E15D31124892C2A00CD8E73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E15D31024892C2A00CD8E73 /* ViewController.swift */; };
 		8E15D31424892C2A00CD8E73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E15D31224892C2A00CD8E73 /* Main.storyboard */; };
 		8E15D31624892C2D00CD8E73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E15D31524892C2D00CD8E73 /* Assets.xcassets */; };
 		8E15D31924892C2D00CD8E73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E15D31724892C2D00CD8E73 /* LaunchScreen.storyboard */; };
@@ -21,6 +20,7 @@
 		8E15D34724893C3C00CD8E73 /* SearchWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E15D34124893C3C00CD8E73 /* SearchWorker.swift */; };
 		8E15D34824893C3C00CD8E73 /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E15D34224893C3C00CD8E73 /* SearchRouter.swift */; };
 		8E15D34D2489410600CD8E73 /* AnimatedGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E15D34C2489410600CD8E73 /* AnimatedGif.swift */; };
+		8E15D3632489B87300CD8E73 /* ServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E15D3622489B87300CD8E73 /* ServiceRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +37,6 @@
 		8E15D30924892C2A00CD8E73 /* GifSearcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GifSearcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E15D30C24892C2A00CD8E73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E15D30E24892C2A00CD8E73 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8E15D31024892C2A00CD8E73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8E15D31324892C2A00CD8E73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8E15D31524892C2D00CD8E73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E15D31824892C2D00CD8E73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -52,6 +51,7 @@
 		8E15D34124893C3C00CD8E73 /* SearchWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchWorker.swift; sourceTree = "<group>"; };
 		8E15D34224893C3C00CD8E73 /* SearchRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
 		8E15D34C2489410600CD8E73 /* AnimatedGif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedGif.swift; sourceTree = "<group>"; };
+		8E15D3622489B87300CD8E73 /* ServiceRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,11 +93,11 @@
 		8E15D30B24892C2A00CD8E73 /* GifSearcher */ = {
 			isa = PBXGroup;
 			children = (
+				8E15D3612489B87300CD8E73 /* ServiceCall */,
 				8E15D349248940F500CD8E73 /* Models */,
 				8E15D33C24893C3C00CD8E73 /* SearchScene */,
 				8E15D30C24892C2A00CD8E73 /* AppDelegate.swift */,
 				8E15D30E24892C2A00CD8E73 /* SceneDelegate.swift */,
-				8E15D31024892C2A00CD8E73 /* ViewController.swift */,
 				8E15D31224892C2A00CD8E73 /* Main.storyboard */,
 				8E15D31524892C2D00CD8E73 /* Assets.xcassets */,
 				8E15D31724892C2D00CD8E73 /* LaunchScreen.storyboard */,
@@ -134,6 +134,14 @@
 				8E15D34C2489410600CD8E73 /* AnimatedGif.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		8E15D3612489B87300CD8E73 /* ServiceCall */ = {
+			isa = PBXGroup;
+			children = (
+				8E15D3622489B87300CD8E73 /* ServiceRequest.swift */,
+			);
+			path = ServiceCall;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,10 +247,10 @@
 			files = (
 				8E15D34D2489410600CD8E73 /* AnimatedGif.swift in Sources */,
 				8E15D34624893C3C00CD8E73 /* SearchModels.swift in Sources */,
-				8E15D31124892C2A00CD8E73 /* ViewController.swift in Sources */,
 				8E15D30D24892C2A00CD8E73 /* AppDelegate.swift in Sources */,
 				8E15D34824893C3C00CD8E73 /* SearchRouter.swift in Sources */,
 				8E15D34524893C3C00CD8E73 /* SearchPresenter.swift in Sources */,
+				8E15D3632489B87300CD8E73 /* ServiceRequest.swift in Sources */,
 				8E15D34324893C3C00CD8E73 /* SearchViewController.swift in Sources */,
 				8E15D34724893C3C00CD8E73 /* SearchWorker.swift in Sources */,
 				8E15D30F24892C2A00CD8E73 /* SceneDelegate.swift in Sources */,
