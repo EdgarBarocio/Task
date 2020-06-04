@@ -20,6 +20,7 @@
 		8E15D34624893C3C00CD8E73 /* SearchModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E15D34024893C3C00CD8E73 /* SearchModels.swift */; };
 		8E15D34724893C3C00CD8E73 /* SearchWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E15D34124893C3C00CD8E73 /* SearchWorker.swift */; };
 		8E15D34824893C3C00CD8E73 /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E15D34224893C3C00CD8E73 /* SearchRouter.swift */; };
+		8E15D34D2489410600CD8E73 /* AnimatedGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E15D34C2489410600CD8E73 /* AnimatedGif.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		8E15D34024893C3C00CD8E73 /* SearchModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchModels.swift; sourceTree = "<group>"; };
 		8E15D34124893C3C00CD8E73 /* SearchWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchWorker.swift; sourceTree = "<group>"; };
 		8E15D34224893C3C00CD8E73 /* SearchRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
+		8E15D34C2489410600CD8E73 /* AnimatedGif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedGif.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 		8E15D30B24892C2A00CD8E73 /* GifSearcher */ = {
 			isa = PBXGroup;
 			children = (
+				8E15D349248940F500CD8E73 /* Models */,
 				8E15D33C24893C3C00CD8E73 /* SearchScene */,
 				8E15D30C24892C2A00CD8E73 /* AppDelegate.swift */,
 				8E15D30E24892C2A00CD8E73 /* SceneDelegate.swift */,
@@ -123,6 +126,14 @@
 				8E15D34224893C3C00CD8E73 /* SearchRouter.swift */,
 			);
 			path = SearchScene;
+			sourceTree = "<group>";
+		};
+		8E15D349248940F500CD8E73 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8E15D34C2489410600CD8E73 /* AnimatedGif.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E15D34D2489410600CD8E73 /* AnimatedGif.swift in Sources */,
 				8E15D34624893C3C00CD8E73 /* SearchModels.swift in Sources */,
 				8E15D31124892C2A00CD8E73 /* ViewController.swift in Sources */,
 				8E15D30D24892C2A00CD8E73 /* AppDelegate.swift in Sources */,
