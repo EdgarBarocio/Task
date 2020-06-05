@@ -26,7 +26,8 @@ protocol SearchDisplayLogic: class {
 /**
  View controller clas of the VIP Clean-Swift Architecture
  
- View of the
+ View that starts the VIP cycle. Containing a search bar, button to perform search and a
+ collection view to display results. 
  */
 class SearchViewController: UIViewController, SearchDisplayLogic {
     var interactor: SearchBusinessLogic?
