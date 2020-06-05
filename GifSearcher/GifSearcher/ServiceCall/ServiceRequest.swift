@@ -22,7 +22,11 @@ class ServiceRequest {
     var images: [AnimatedGif] = []
     var errorMessage = ""
     
-    
+    /**
+     Service call
+     - Parameter searchTerm: Entered search query
+     - Parameter completion: Closure that handles result of call
+     */
     func getSearchResults(searchTerm: String, completion: @escaping SearchResult) {
         urlDataTask?.cancel()
         
@@ -53,6 +57,12 @@ class ServiceRequest {
         urlDataTask?.resume()
     }
     
+    /**
+     Internal function to parse Data received from service call, parses response and adds Objects to the
+     images array, this is then returned by the service response
+     
+     - Parameter data: Raw data from service response
+     */
     fileprivate func parseResults(_ data: Data) {
         var response: JSONDictionary?
         images.removeAll()
@@ -68,15 +78,20 @@ class ServiceRequest {
             errorMessage += "Dictionary does not contain Data key, no results returned in success \n"
             return
         }
-        print(array[0])
-//        let decoder = JSONDecoder()
-//
-//        do {
-//            let decoded = try decoder.decode([AnimatedGif].self, from: data)
-//            print(decoded[0].url)
-//        } catch {
-//            print("Failed to decode JSON")
-//        }
+        
+        for trackDictionary in array {
+            if
+                let trackDictionary = trackDictionary as? JSONDictionary,
+                let imagesSample = trackDictionary["images"] as? JSONDictionary,
+                let originalImage = imagesSample["original"] as? JSONDictionary,
+                let downsizedImage = imagesSample["downsized"] as? JSONDictionary,
+                let imageURL = originalImage["url"] as? String,
+                let smallImageURL = downsizedImage["url"] as? String {
+                    images.append(AnimatedGif(url: imageURL, urlSmall: smallImageURL))
+            } else {
+                errorMessage += "Problem parsing trackDictionary\n"
+            }
+        }
     }
     
 }

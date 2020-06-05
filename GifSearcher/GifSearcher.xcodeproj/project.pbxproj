@@ -95,6 +95,7 @@
 		8E15D30B24892C2A00CD8E73 /* GifSearcher */ = {
 			isa = PBXGroup;
 			children = (
+				8E15D3782489FE6200CD8E73 /* Views */,
 				8E15D3612489B87300CD8E73 /* ServiceCall */,
 				8E15D349248940F500CD8E73 /* Models */,
 				8E15D33C24893C3C00CD8E73 /* SearchScene */,
@@ -145,6 +146,13 @@
 				8E15D3622489B87300CD8E73 /* ServiceRequest.swift */,
 			);
 			path = ServiceCall;
+			sourceTree = "<group>";
+		};
+		8E15D3782489FE6200CD8E73 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
