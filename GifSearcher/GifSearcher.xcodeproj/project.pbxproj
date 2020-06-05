@@ -22,6 +22,8 @@
 		8E15D36F2489C02E00CD8E73 /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E15D36A2489C02E00CD8E73 /* SearchInteractor.swift */; };
 		8E15D3712489E6A800CD8E73 /* SampleSearch.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E15D3702489E6A800CD8E73 /* SampleSearch.json */; };
 		8E15D3732489E7D700CD8E73 /* ServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E15D3622489B87300CD8E73 /* ServiceRequest.swift */; };
+		8E15D387248A02F600CD8E73 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E15D385248A02F600CD8E73 /* SearchResultCell.swift */; };
+		8E15D388248A02F600CD8E73 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E15D386248A02F600CD8E73 /* SearchResultCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,9 @@
 		8E15D3692489C02E00CD8E73 /* SearchWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchWorker.swift; sourceTree = "<group>"; };
 		8E15D36A2489C02E00CD8E73 /* SearchInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
 		8E15D3702489E6A800CD8E73 /* SampleSearch.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SampleSearch.json; sourceTree = "<group>"; };
+		8E15D381248A028A00CD8E73 /* FLAnimatedImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FLAnimatedImage.framework; path = ../Carthage/Build/iOS/FLAnimatedImage.framework; sourceTree = "<group>"; };
+		8E15D385248A02F600CD8E73 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
+		8E15D386248A02F600CD8E73 /* SearchResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +85,7 @@
 				8E15D30B24892C2A00CD8E73 /* GifSearcher */,
 				8E15D32224892C2D00CD8E73 /* GifSearcherTests */,
 				8E15D30A24892C2A00CD8E73 /* Products */,
+				8E15D380248A028A00CD8E73 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -151,8 +157,18 @@
 		8E15D3782489FE6200CD8E73 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8E15D385248A02F600CD8E73 /* SearchResultCell.swift */,
+				8E15D386248A02F600CD8E73 /* SearchResultCell.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		8E15D380248A028A00CD8E73 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8E15D381248A028A00CD8E73 /* FLAnimatedImage.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +254,7 @@
 			files = (
 				8E15D31924892C2D00CD8E73 /* LaunchScreen.storyboard in Resources */,
 				8E15D31624892C2D00CD8E73 /* Assets.xcassets in Resources */,
+				8E15D388248A02F600CD8E73 /* SearchResultCell.xib in Resources */,
 				8E15D31424892C2A00CD8E73 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,6 +283,7 @@
 				8E15D30D24892C2A00CD8E73 /* AppDelegate.swift in Sources */,
 				8E15D36E2489C02E00CD8E73 /* SearchWorker.swift in Sources */,
 				8E15D30F24892C2A00CD8E73 /* SceneDelegate.swift in Sources */,
+				8E15D387248A02F600CD8E73 /* SearchResultCell.swift in Sources */,
 				8E15D36D2489C02E00CD8E73 /* SearchModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -435,7 +453,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.GifSearcher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -452,7 +470,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.GifSearcher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
