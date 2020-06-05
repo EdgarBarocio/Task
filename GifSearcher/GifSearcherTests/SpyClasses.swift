@@ -48,12 +48,3 @@ class SearchInteractorSpy: SearchBusinessLogic {
         searchGifsCalled = true
     }
 }
-
-class SearchWorkerSpy: SearchWorkerProtocol {
-    var serviceCallMade = false
-    
-    //MARK: - Spy
-    func performSearch(searchTerm: String, completionHandler: @escaping ([AnimatedGif]) -> Void) {
-        serviceCallMade = true
-    }
-}
