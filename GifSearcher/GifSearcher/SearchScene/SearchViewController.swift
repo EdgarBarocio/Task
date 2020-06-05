@@ -8,11 +8,9 @@
 import UIKit
 
 /**
- Enum to display error messages and search status
+ Enum to display error messages on text field
  */
 private enum SearchDisplayResults: String {
-    case firstMessage = "Enter Search Term"
-    case loadingMessage = "Searching..."
     case noResults = "No Results Found"
 }
 
@@ -32,9 +30,10 @@ protocol SearchDisplayLogic: class {
 class SearchViewController: UIViewController, SearchDisplayLogic {
     var interactor: SearchBusinessLogic?
     var router: (NSObjectProtocol & SearchRoutingLogic & SearchDataPassing)?
+    var results: [AnimatedGif] = []
     
     // MARK: Outlets
-    @IBOutlet weak var searTextField: UITextField!
+    @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var searchResults: UICollectionView!
     
@@ -78,18 +77,69 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        doSomething()
+        
+        searchResults?.delegate = self
+        searchResults?.dataSource = self
+        searchResults?.register(UINib.init(nibName: "SearchResultCell", bundle: nil), forCellWithReuseIdentifier: "GifCell")
+        searchButton?.isEnabled = false
+        searchTextField?.delegate = self
+        searchGifs()
     }
     
-    // MARK: Do something
+    // MARK: Actions
     
-    func doSomething() {
-        let request = AnimatedGifSearch.Search.Request(searchTerm: "Cat")
+    func searchGifs() {
+        let text = searchTextField?.text ?? ""
+        let request = AnimatedGifSearch.Search.Request(searchTerm: text)
         interactor?.performGifSearch(request: request)
     }
     
+    
     func displayAnimatedGifs(viewModel: AnimatedGifSearch.Search.ViewModel) {
-        //nameTextField.text = viewModel.name
-        print(viewModel.searchResult)
+        
+        guard let result = viewModel.searchResult else {
+            searchTextField?.text = SearchDisplayResults.noResults.rawValue
+            return
+        }
+        
+        results = result
+        searchResults?.reloadData()
+    }
+    
+    // MARK: Button Action
+    @IBAction func searchPressed(_ sender: Any) {
+        searchTextField?.resignFirstResponder()
+        searchGifs()
+    }
+}
+
+// MARK: Text field Delegate and Protocols
+extension SearchViewController: UITextFieldDelegate {
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        searchButton?.isEnabled = true
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        searchGifs()
+        
+        return true
+    }
+}
+
+// MARK: CollectionView Datasource and Delegate
+extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return results.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let identifier = "GifCell"
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! SearchResultCell
+        
+        let displayInfo = results[indexPath.row]
+        cell.update(with: displayInfo.urlSmall)
+        return cell
     }
 }

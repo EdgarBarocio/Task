@@ -15,8 +15,6 @@ class SearchResultCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-        
         update(with: nil)
     }
     
@@ -36,7 +34,6 @@ class SearchResultCell: UICollectionViewCell {
             spinner.stopAnimating()
         } else {
             spinner.startAnimating()
-            
         }
     }
 }
