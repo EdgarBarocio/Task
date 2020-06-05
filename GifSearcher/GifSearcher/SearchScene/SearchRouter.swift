@@ -7,6 +7,9 @@
 
 import UIKit
 
+//TODO: Implement navigation, this present the gif
+// Not implemented on this delivery
+
 @objc protocol SearchRoutingLogic {
   //func routeToSomewhere(segue: UIStoryboardSegue?)
 }
