@@ -8,7 +8,7 @@
 import XCTest
 @testable import GifSearcher
 
-class GifSearcherTests: XCTestCase {
+class GifSearcherModelTests: XCTestCase {
 
     func test_AnimatedGifModel_ShouldInitialize() throws {
         let gif:AnimatedGif = AnimatedGif(url: "http://media0.giphy.com/media/l4Ki5O9v4ZkNiTl7O/giphy.gif",

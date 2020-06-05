@@ -14,17 +14,13 @@ struct GifSample {
                                         urlSmall: "http://media.giphy.com/media/l4Ki5O9v4ZkNiTl7O/giphy-tumblr.gif")
 }
 
-class SearchPresenterDisplayLogicSpy: SearchPresentationLogic {
+class SearchPresenterSpy: SearchPresentationLogic {
     
     //MARK: - Expectation
     var presentGifsCalled = false
     
-    //MARK: - Argument expectations
-    var viewModel: AnimatedGifSearch.Search.ViewModel!
-    
     //MARK: - Spy
     func presentSearchResults(response: AnimatedGifSearch.Search.Response) {
-        viewModel = AnimatedGifSearch.Search.ViewModel(searchResult: response.searchResult)
         presentGifsCalled = true
     }
 }
@@ -33,8 +29,12 @@ class SearchViewControllerSpy: SearchDisplayLogic {
     //MARK: - Expectation
     var displayGifsCalled = false
     
+    //MARK: - Argument expectations
+    var viewModel: AnimatedGifSearch.Search.ViewModel!
+    
     //MARK: - Spy
     func displayAnimatedGifs(viewModel: AnimatedGifSearch.Search.ViewModel) {
+        self.viewModel = viewModel
         displayGifsCalled = true
     }
 }

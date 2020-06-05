@@ -12,7 +12,7 @@
 		8E15D31424892C2A00CD8E73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E15D31224892C2A00CD8E73 /* Main.storyboard */; };
 		8E15D31624892C2D00CD8E73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E15D31524892C2D00CD8E73 /* Assets.xcassets */; };
 		8E15D31924892C2D00CD8E73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E15D31724892C2D00CD8E73 /* LaunchScreen.storyboard */; };
-		8E15D32424892C2D00CD8E73 /* GifSearcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E15D32324892C2D00CD8E73 /* GifSearcherTests.swift */; };
+		8E15D32424892C2D00CD8E73 /* GifSearcherModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E15D32324892C2D00CD8E73 /* GifSearcherModelTests.swift */; };
 		8E15D34D2489410600CD8E73 /* AnimatedGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E15D34C2489410600CD8E73 /* AnimatedGif.swift */; };
 		8E15D3652489BFBD00CD8E73 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E15D3642489BFBD00CD8E73 /* SearchViewController.swift */; };
 		8E15D36B2489C02E00CD8E73 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E15D3662489C02E00CD8E73 /* SearchPresenter.swift */; };
@@ -25,10 +25,10 @@
 		8E15D387248A02F600CD8E73 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E15D385248A02F600CD8E73 /* SearchResultCell.swift */; };
 		8E15D388248A02F600CD8E73 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E15D386248A02F600CD8E73 /* SearchResultCell.xib */; };
 		8E411A75248A983F00DE9000 /* GifSearchPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E411A74248A983F00DE9000 /* GifSearchPresenterTests.swift */; };
-		8E411A79248A9DA400DE9000 /* SearchGifInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E411A78248A9DA400DE9000 /* SearchGifInteractorTests.swift */; };
 		8E411A7B248A9F0000DE9000 /* SpyClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E411A7A248A9F0000DE9000 /* SpyClasses.swift */; };
-		8E411A7D248AB55800DE9000 /* SearchGifWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E411A7C248AB55800DE9000 /* SearchGifWorkerTests.swift */; };
-		8E411A7F248AB58D00DE9000 /* SearchGifViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E411A7E248AB58D00DE9000 /* SearchGifViewTests.swift */; };
+		8E411A80248ACE0800DE9000 /* SearchGifViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E411A7E248AB58D00DE9000 /* SearchGifViewTests.swift */; };
+		8E411A81248ACE0B00DE9000 /* SearchGifWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E411A7C248AB55800DE9000 /* SearchGifWorkerTests.swift */; };
+		8E411A82248ACE0E00DE9000 /* SearchGifInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E411A78248A9DA400DE9000 /* SearchGifInteractorTests.swift */; };
 		A2E77E725FA26F557D8A6F87 /* Pods_GifSearcherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9917FA6629C5E2417FD5F44D /* Pods_GifSearcherTests.framework */; };
 		B02DCEB587AEADACF9499800 /* Pods_GifSearcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87B5EEECB7BFEF696FCD2C1B /* Pods_GifSearcher.framework */; };
 /* End PBXBuildFile section */
@@ -57,7 +57,7 @@
 		8E15D31824892C2D00CD8E73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E15D31A24892C2D00CD8E73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E15D31F24892C2D00CD8E73 /* GifSearcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GifSearcherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8E15D32324892C2D00CD8E73 /* GifSearcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifSearcherTests.swift; sourceTree = "<group>"; };
+		8E15D32324892C2D00CD8E73 /* GifSearcherModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifSearcherModelTests.swift; sourceTree = "<group>"; };
 		8E15D32524892C2D00CD8E73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E15D34C2489410600CD8E73 /* AnimatedGif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedGif.swift; sourceTree = "<group>"; };
 		8E15D3622489B87300CD8E73 /* ServiceRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceRequest.swift; sourceTree = "<group>"; };
@@ -150,7 +150,7 @@
 		8E15D32224892C2D00CD8E73 /* GifSearcherTests */ = {
 			isa = PBXGroup;
 			children = (
-				8E15D32324892C2D00CD8E73 /* GifSearcherTests.swift */,
+				8E15D32324892C2D00CD8E73 /* GifSearcherModelTests.swift */,
 				8E15D32524892C2D00CD8E73 /* Info.plist */,
 				8E15D3702489E6A800CD8E73 /* SampleSearch.json */,
 				8E411A74248A983F00DE9000 /* GifSearchPresenterTests.swift */,
@@ -398,12 +398,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E15D32424892C2D00CD8E73 /* GifSearcherTests.swift in Sources */,
-				8E411A7F248AB58D00DE9000 /* SearchGifViewTests.swift in Sources */,
+				8E15D32424892C2D00CD8E73 /* GifSearcherModelTests.swift in Sources */,
+				8E411A80248ACE0800DE9000 /* SearchGifViewTests.swift in Sources */,
+				8E411A81248ACE0B00DE9000 /* SearchGifWorkerTests.swift in Sources */,
 				8E411A7B248A9F0000DE9000 /* SpyClasses.swift in Sources */,
-				8E411A7D248AB55800DE9000 /* SearchGifWorkerTests.swift in Sources */,
 				8E411A75248A983F00DE9000 /* GifSearchPresenterTests.swift in Sources */,
-				8E411A79248A9DA400DE9000 /* SearchGifInteractorTests.swift in Sources */,
+				8E411A82248ACE0E00DE9000 /* SearchGifInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

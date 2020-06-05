@@ -27,6 +27,6 @@ class SearchGifInteractorTests: XCTestCase {
     }
     
     func test_presentGifs_ShouldConfirmPresentWasCalled() {
-        let presenter = GifSear
+
     }
 }

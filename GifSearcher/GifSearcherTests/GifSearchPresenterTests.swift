@@ -25,7 +25,7 @@ class GifSearchPresenterTests: XCTestCase {
     }
     
     func test_presentGifs_shouldAskViewControllerToDisplay() throws {
-        let displayLogicSpy = SearchPresenterDisplayLogicSpy()
+        let displayLogicSpy = SearchViewControllerSpy()
         sut.viewController = displayLogicSpy
         
         let gif = [GifSample.sampleGif]
@@ -33,11 +33,11 @@ class GifSearchPresenterTests: XCTestCase {
         let response = AnimatedGifSearch.Search.Response(searchResult: gif)
         sut.presentSearchResults(response: response)
         
-        XCTAssertTrue(displayLogicSpy.presentGifsCalled, "Present fetched gifs should ask view controller to display them")
+        XCTAssertTrue(displayLogicSpy.displayGifsCalled, "Present fetched gifs should ask view controller to display them")
     }
     
     func test_PresentGifs_ShouldFormatForDisplay() {
-        let displayLogicSpy = SearchPresenterDisplayLogicSpy()
+        let displayLogicSpy = SearchViewControllerSpy()
         sut.viewController = displayLogicSpy
         
         let gifs = [GifSample.sampleGif]
