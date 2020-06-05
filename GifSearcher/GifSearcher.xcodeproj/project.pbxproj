@@ -25,9 +25,10 @@
 		8E15D387248A02F600CD8E73 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E15D385248A02F600CD8E73 /* SearchResultCell.swift */; };
 		8E15D388248A02F600CD8E73 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E15D386248A02F600CD8E73 /* SearchResultCell.xib */; };
 		8E411A75248A983F00DE9000 /* GifSearchPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E411A74248A983F00DE9000 /* GifSearchPresenterTests.swift */; };
-		8E411A77248A9ABF00DE9000 /* GifSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E411A76248A9ABF00DE9000 /* GifSample.swift */; };
 		8E411A79248A9DA400DE9000 /* SearchGifInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E411A78248A9DA400DE9000 /* SearchGifInteractorTests.swift */; };
 		8E411A7B248A9F0000DE9000 /* SpyClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E411A7A248A9F0000DE9000 /* SpyClasses.swift */; };
+		8E411A7D248AB55800DE9000 /* SearchGifWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E411A7C248AB55800DE9000 /* SearchGifWorkerTests.swift */; };
+		8E411A7F248AB58D00DE9000 /* SearchGifViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E411A7E248AB58D00DE9000 /* SearchGifViewTests.swift */; };
 		A2E77E725FA26F557D8A6F87 /* Pods_GifSearcherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9917FA6629C5E2417FD5F44D /* Pods_GifSearcherTests.framework */; };
 		B02DCEB587AEADACF9499800 /* Pods_GifSearcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87B5EEECB7BFEF696FCD2C1B /* Pods_GifSearcher.framework */; };
 /* End PBXBuildFile section */
@@ -71,9 +72,10 @@
 		8E15D385248A02F600CD8E73 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		8E15D386248A02F600CD8E73 /* SearchResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
 		8E411A74248A983F00DE9000 /* GifSearchPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifSearchPresenterTests.swift; sourceTree = "<group>"; };
-		8E411A76248A9ABF00DE9000 /* GifSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifSample.swift; sourceTree = "<group>"; };
 		8E411A78248A9DA400DE9000 /* SearchGifInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGifInteractorTests.swift; sourceTree = "<group>"; };
 		8E411A7A248A9F0000DE9000 /* SpyClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyClasses.swift; sourceTree = "<group>"; };
+		8E411A7C248AB55800DE9000 /* SearchGifWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGifWorkerTests.swift; sourceTree = "<group>"; };
+		8E411A7E248AB58D00DE9000 /* SearchGifViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGifViewTests.swift; sourceTree = "<group>"; };
 		9917FA6629C5E2417FD5F44D /* Pods_GifSearcherTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GifSearcherTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -152,8 +154,9 @@
 				8E15D32524892C2D00CD8E73 /* Info.plist */,
 				8E15D3702489E6A800CD8E73 /* SampleSearch.json */,
 				8E411A74248A983F00DE9000 /* GifSearchPresenterTests.swift */,
-				8E411A76248A9ABF00DE9000 /* GifSample.swift */,
 				8E411A78248A9DA400DE9000 /* SearchGifInteractorTests.swift */,
+				8E411A7C248AB55800DE9000 /* SearchGifWorkerTests.swift */,
+				8E411A7E248AB58D00DE9000 /* SearchGifViewTests.swift */,
 				8E411A7A248A9F0000DE9000 /* SpyClasses.swift */,
 			);
 			path = GifSearcherTests;
@@ -396,8 +399,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E15D32424892C2D00CD8E73 /* GifSearcherTests.swift in Sources */,
-				8E411A77248A9ABF00DE9000 /* GifSample.swift in Sources */,
+				8E411A7F248AB58D00DE9000 /* SearchGifViewTests.swift in Sources */,
 				8E411A7B248A9F0000DE9000 /* SpyClasses.swift in Sources */,
+				8E411A7D248AB55800DE9000 /* SearchGifWorkerTests.swift in Sources */,
 				8E411A75248A983F00DE9000 /* GifSearchPresenterTests.swift in Sources */,
 				8E411A79248A9DA400DE9000 /* SearchGifInteractorTests.swift in Sources */,
 			);
