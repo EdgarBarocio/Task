@@ -10,24 +10,11 @@ import XCTest
 
 class GifSearcherTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func test_AnimatedGifModel_ShouldInitialize() throws {
+        let gif:AnimatedGif = AnimatedGif(url: "http://media0.giphy.com/media/l4Ki5O9v4ZkNiTl7O/giphy.gif",
+                                          urlSmall: "http://media.giphy.com/media/l4Ki5O9v4ZkNiTl7O/giphy-tumblr.gif")
+        
+        XCTAssertNotNil(gif.url, "URL should not be nil")
+        XCTAssertNotNil(gif.urlSmall, "Downsized URL should not be nil")
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }

@@ -23,6 +23,9 @@ Application is built using VIP Clean-Swift, this is to improve testability and t
 * Worker: Heavy lifting class, in this project, makes the service call and parses the result
 * Router: Navigation to other scenes and views. Not implemented in the first step but will be implemented soon. This handles al segues and transitions and helps with data transfer between flows.
 
+**Third Party Frameworks**
+Application uses [FLAnimatedImage](https://github.com/Flipboard/FLAnimatedImage) to display animated gifs on the results
+
 **Future improvements**
 * Convert Service Response parser and Animated Gif model to use Codable, instead of dictionaries and tight key values
 * Add more unit tests

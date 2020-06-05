@@ -5,7 +5,14 @@
 //  Created on 6/4/20.
 //
 
-import UIKit
+import Foundation
+
+/***
+ Protocol to abstract search execution
+ */
+protocol SearchWorkerProtocol {
+    func performSearch(searchTerm: String, completionHandler: @escaping ([AnimatedGif]) -> Void)
+}
 
 /**
  Worker class of the VIP Clean-Swift architecture
@@ -13,7 +20,7 @@ import UIKit
  Search worker instantiates the ServiceRequest class to perform web requests
  Returns formatted result on the main thread.
  */
-class SearchWorker {
+class SearchWorker: SearchWorkerProtocol {
     
     var imageResults:[AnimatedGif] = []
     let serviceRequest = ServiceRequest()
