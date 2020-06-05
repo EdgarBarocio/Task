@@ -31,7 +31,7 @@ class SearchResultCell: UICollectionViewCell {
             
             let url = URL(string: urlOfGif)!
             let imageData = try? Data(contentsOf: url)
-            let animatedGif = FLAnmatedIamge(animatedGifData: imageData)
+            let animatedGif = FLAnimatedImage(animatedGIFData: imageData)
             imageView.animatedImage = animatedGif
             spinner.stopAnimating()
         } else {
